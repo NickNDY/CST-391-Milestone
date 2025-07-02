@@ -1,0 +1,18 @@
+<form id="updateForm" method="post" (submit)="onSubmit()">
+    <div class="form-group">
+        <input type="number" id="id" name="id" hidden value="{{ selectedNote!.noteId }}">
+    </div>
+    <div class="form-group">
+        <label for="title" style="width: 90%; margin-left: auto; margin-right: auto;">Title</label><br>
+        <input type="text" class="form-control" id="title" name="title" required value="{{ selectedNote!.title }}" style="width: 90%; margin-left: auto; margin-right: auto;"><br>
+    </div>
+    <div class="form-group">
+        <h5 style="width: 90%; margin-left: auto; margin-right: auto;">{{ selectedNote!.creation_date }} </h5>
+        <input type="text" class="form-control" id="creation_date" name="creation_date" value="{{ selectedNote!.creation_date}}" hidden>
+    </div>
+    <div class="form-group">
+        <label for="content" style="width: 90%; margin-left: auto; margin-right: auto;">Content</label><br>
+        <textarea id="content" class="form-control" name="content" required value="{{ selectedNote!.content }}" style="width: 90%; margin-left: auto; margin-right: auto;" rows="30"></textarea><br>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-primary">
+</form>

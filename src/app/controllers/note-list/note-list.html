@@ -1,0 +1,17 @@
+<div id="noteSection" class="d-flex flex-wrap">
+    <div class="card" style="width: 20rem; height: 15rem;" *ngFor="let note of notes">
+        <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ note.title }}</h5>
+            <p class="card-text">{{ note.content }}</p>
+            <div class="mt-auto d-flex flex-row">
+                <div>
+                    <a (click)="onSelectNote(note)" href="/notes/update?id={{note.noteId}}" class="btn btn-primary">Update</a>
+                </div>
+                <div style="flex-grow: 1; visibility: hidden;"></div>
+                <div>
+                    <a href="/notes/delete?id={{note.noteId}}" class="btn btn-danger">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
