@@ -1,15 +1,15 @@
 import express, { Request, Response}  from 'express';
-import notesRouter from '../../notes/notes.routes';
+import notesRouter from './app/notes/notes.routes';
 import helmet from 'helmet';
 import cors from 'cors';
-import logger from '../../middleware/logger.middleware';
+import logger from './app/middleware/logger.middleware';
 import dotenv from 'dotenv';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NoteService } from '../../services/note-service';
-import { Note } from '../../models/notes.model';
+import { NoteService } from './app/services/note-service';
+import { Note } from './app/models/notes.model';
 
 let config = dotenv.config();
 if (typeof config.error !== 'undefined')

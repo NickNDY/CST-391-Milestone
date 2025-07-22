@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import * as NotesController from '../rest/notes.controller';
-import { App } from '../controllers/app/app';
+import { App } from '../../app';
 
 const router = Router();
 router
